@@ -18,7 +18,7 @@
                         <ColumnDefinition Width="144*"/>
                         <ColumnDefinition Width="253*"/>
                     </Grid.ColumnDefinitions>
-
+                        <Image Source="/Image/ДонКихот.jpg" Grid.ColumnSpan="2" />
                     <DockPanel>
                         <StackPanel DockPanel.Dock="Top" Margin="10,0,0,0">
                             <Label Content="Представления"/>
