@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System;
 using System.Collections.Generic;
@@ -130,14 +130,35 @@ namespace ПМ_02_Абдуллин_Владислав_Радомирович_б�
             Random rnd1 = new Random();
             int c = rnd1.Next(0, 100000);
 
-            
+            string tovar = "";
+            if (performances.SelectedIndex == 0)
+            {
+                tovar += "Красная шапочка";
+            }
+            if(performances.SelectedIndex == 1)
+                {
+                tovar += "Летучий корабль";
+            }
+            if (performances.SelectedIndex == 2)
+                {
+                tovar += "Лебединое озеро";
+            }
+            if (performances.SelectedIndex == 3)
+                {
+                tovar += "Донкихот";
+            }
+            if (performances.SelectedIndex == 4)
+                {
+                tovar += "Алые паруса";
+            }
+
             var helper = new WordHelper("чек.docx");
 
             {
                 var items = new Dictionary<string, string>
             {
                {"{итог}",Convert.ToString(cost)},
-                //{"{Товар}",$@"{tovar + "\t\n" + tovar1 + "\t\n" + tovar2 }"},
+                  {"{Товар}",$@"{tovar }"},
                 {"{дата}", Convert.ToString(DateTime.Now)},
                 {"{Уникальный_номер}", Convert.ToString(c)}
 
